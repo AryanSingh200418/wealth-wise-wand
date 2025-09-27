@@ -21,7 +21,7 @@ import {
 const initialTransactions = [
   {
     id: "1",
-    amount: 3200,
+    amount: 80000,
     category: "Salary",
     description: "Monthly Salary",
     date: "2024-01-15",
@@ -29,7 +29,7 @@ const initialTransactions = [
   },
   {
     id: "2", 
-    amount: -85.50,
+    amount: -2500,
     category: "Food",
     description: "Grocery Shopping",
     date: "2024-01-14",
@@ -37,15 +37,15 @@ const initialTransactions = [
   },
   {
     id: "3",
-    amount: -45.00,
+    amount: -1200,
     category: "Transportation",
-    description: "Gas Station",
+    description: "Fuel",
     date: "2024-01-13",
     type: "expense" as const
   },
   {
     id: "4",
-    amount: 500,
+    amount: 15000,
     category: "Freelance",
     description: "Web Design Project",
     date: "2024-01-12",
@@ -54,10 +54,10 @@ const initialTransactions = [
 ];
 
 const budgets = [
-  { category: "Food", spent: 285.50, budget: 400, icon: UtensilsCrossed },
-  { category: "Transportation", spent: 180.00, budget: 200, icon: Car },
-  { category: "Housing", spent: 1200.00, budget: 1200, icon: Home },
-  { category: "Entertainment", spent: 95.00, budget: 150, icon: Gamepad2 }
+  { category: "Food", spent: 8500, budget: 12000, icon: UtensilsCrossed },
+  { category: "Transportation", spent: 4500, budget: 6000, icon: Car },
+  { category: "Housing", spent: 25000, budget: 25000, icon: Home },
+  { category: "Entertainment", spent: 2800, budget: 4000, icon: Gamepad2 }
 ];
 
 export const FinanceDashboard = () => {
@@ -124,28 +124,28 @@ export const FinanceDashboard = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           <FinanceCard
             title="Total Balance"
-            amount={`$${balance.toFixed(2)}`}
+            amount={balance.toFixed(2)}
             icon={Wallet}
             variant="balance"
             trend={{ value: "12.5%", isPositive: true }}
           />
           <FinanceCard
             title="Total Income"
-            amount={`$${totalIncome.toFixed(2)}`}
+            amount={totalIncome.toFixed(2)}
             icon={TrendingUp}
             variant="income"
             trend={{ value: "8.2%", isPositive: true }}
           />
           <FinanceCard
             title="Total Expenses"
-            amount={`$${totalExpenses.toFixed(2)}`}
+            amount={totalExpenses.toFixed(2)}
             icon={TrendingDown}
             variant="expense"
             trend={{ value: "3.1%", isPositive: false }}
           />
           <FinanceCard
             title="Savings Goal"
-            amount={`$${savings.toFixed(2)}`}
+            amount={savings.toFixed(2)}
             icon={PiggyBank}
             variant="savings"
             trend={{ value: "15.7%", isPositive: true }}

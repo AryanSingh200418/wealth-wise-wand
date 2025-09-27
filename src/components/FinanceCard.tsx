@@ -42,7 +42,7 @@ export const FinanceCard = ({
         <Icon className="h-5 w-5 opacity-80" />
       </CardHeader>
       <CardContent>
-        <div className="text-2xl font-bold mb-1">{amount}</div>
+        <div className="text-2xl font-bold mb-1">₹{amount}</div>
         {trend && (
           <p className={cn(
             "text-xs opacity-80",

@@ -38,7 +38,7 @@ export const BudgetProgress = ({
         <div className="space-y-2">
           <div className="flex justify-between text-sm">
             <span className="text-muted-foreground">Spent</span>
-            <span className="font-medium">${spent.toFixed(2)}</span>
+            <span className="font-medium">₹{spent.toFixed(2)}</span>
           </div>
           <Progress 
             value={Math.min(percentage, 100)} 
@@ -56,7 +56,7 @@ export const BudgetProgress = ({
               {percentage.toFixed(1)}% used
             </span>
             <span className="text-muted-foreground">
-              Budget: ${budget.toFixed(2)}
+              Budget: ₹{budget.toFixed(2)}
             </span>
           </div>
         </div>

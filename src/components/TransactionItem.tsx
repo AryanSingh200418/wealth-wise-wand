@@ -47,7 +47,7 @@ export const TransactionItem = ({ transaction }: TransactionItemProps) => {
           "font-semibold",
           isIncome ? "text-income" : "text-expense"
         )}>
-          {isIncome ? "+" : "-"}${Math.abs(transaction.amount).toFixed(2)}
+          {isIncome ? "+" : "-"}₹{Math.abs(transaction.amount).toFixed(2)}
         </span>
       </div>
     </div>
